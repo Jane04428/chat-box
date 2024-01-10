@@ -13,7 +13,7 @@
 <!-- Start of Talkdesk Code -->
     <script>
       var webchat;
-      ((window, document, node, props, configs) => {
+      (function(window, document, node, props, configs) {
         if (window.TalkdeskChatSDK) {
           console.error("TalkdeskChatSDK already included");
           return;
@@ -21,7 +21,7 @@
         var divContainer = document.createElement("div");
         divContainer.id = node;
         document.body.appendChild(divContainer);
-        var src = `https://talkdeskchatsdk.talkdeskapp.com/talkdeskchatsdk.js`;
+        var src = "https://talkdeskchatsdk.svc.talkdeskqa.com/talkdeskchatsdk.js";
         var script = document.createElement("script");
         var firstScriptTag = document.getElementsByTagName("script")[0];
         script.type = "text/javascript";
@@ -30,7 +30,7 @@
         script.src = src;
         script.async = true;
         firstScriptTag.parentNode.insertBefore(script, firstScriptTag);
-        script.onload = () => {
+        script.onload = function() {
           webchat = TalkdeskChatSDK(node, props);
           webchat.init(configs);
           /*
