@@ -10,6 +10,7 @@
   <body>
     <h1>Hello</h1>
   </body>
+  
 <!-- Start of Talkdesk Code -->
     <script>
       var webchat;
@@ -21,7 +22,7 @@
         var divContainer = document.createElement("div");
         divContainer.id = node;
         document.body.appendChild(divContainer);
-        var src = "https://talkdeskchatsdk.svc.talkdeskqa.com/talkdeskchatsdk.js";
+        var src = "https://talkdeskchatsdk.talkdeskapp.com/talkdeskchatsdk.js";
         var script = document.createElement("script");
         var firstScriptTag = document.getElementsByTagName("script")[0];
         script.type = "text/javascript";
@@ -54,8 +55,8 @@
         window,
         document,
         "tdWebchat",
-        { touchpointId: "25b1f05fe4c649d2aaa7f1b4dd944b4f", accountId: "", region: "td-us-1" },
-        { enableValidation: false, enableEmoji: true, enableUserInput: true, enableAttachments: true }
+        { touchpointId: "e07fc152438240009db4df54f44b526d", accountId: "", region: "td-us-1" },
+        { enableValidation: true, enableEmoji: true, enableUserInput: true, enableAttachments: true }
       );
     </script>
 <!-- End of Talkdesk Code -->
