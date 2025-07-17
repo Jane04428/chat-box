@@ -41,6 +41,7 @@
            */
            function setContext() {
              const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+             console.log("Current timezone:", timezone);
              webchat.setContextParam({ "timezone": timezone })
            }
            // Send data when the chat conversation is initiated
