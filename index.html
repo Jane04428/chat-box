@@ -22,7 +22,7 @@
         var divContainer = document.createElement("div");
         divContainer.id = node;
         document.body.appendChild(divContainer);
-        var src = "https://talkdeskchatsdk.svc.talkdeskqa.com/v2/talkdeskchatsdk.js";
+        var src = "https://talkdeskchatsdk.talkdeskapp.com/v2/talkdeskchatsdk.js";
         var script = document.createElement("script");
         var firstScriptTag = document.getElementsByTagName("script")[0];
         script.type = "text/javascript";
@@ -39,10 +39,8 @@
            * If you would like to do it, you need to remove the following commented code and
            * modify the webchat.setContextParam parameters to pass in the data you need.
            */
-           function setContext() {
-             const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-             console.log("Current timezone:", timezone);
-             webchat.setContextParam({ "timezone": timezone })
+           /*function setContext() {
+             webchat.setContextParam({ "var1": "value1", "var2": "value2", "var3": 100 })
            }
            // Send data when the chat conversation is initiated
            webchat.onConversationStart = function() {
@@ -51,13 +49,13 @@
            // Send data when the chat widget is open
            webchat.onOpenWebchat = function() {
              setContext()
-           }
+           }*/
         };
       })(
         window,
         document,
         "tdWebchat",
-        { touchpointId: "44a126afcb684b98ab48001f82ccfdf3", accountId: "", region: "td-us-1" },
+        { touchpointId: "fa5c99bdddf94fe9988810bf0b967559", accountId: "", region: "td-us-1" },
         { enableValidation: false, enableEmoji: true, enableUserInput: true, enableAttachments: true }
       );
     </script>
